@@ -20,11 +20,20 @@ function Home() {
         </div>
       </div>
       <div className="w-full bg-black p-[3.5rem]">
-        <div className="  mx-auto bg-black flex gap-6 flex-wrap">
+        <div className="mx-auto bg-black flex gap-6 flex-wrap">
           {images.map((items) => {
             return (
               <div className="h-[42rem] w-[28rem] rounded-md border-[#282828] border mx-auto bg-black">
                 <img src={items.images} className="w-full h-[70%]" alt="" />
+
+                <div className="text-white px-8 pt-8">
+                  <span className="pr-4 font-semibold">GTA ONLINE</span>
+                  <span className="text-gray-500 text-sm">10dec,2024</span>
+
+                  <h2 className="text-[1.6rem] pt-4 tracking-tighter font-semibold">
+                    {items.text}
+                  </h2>
+                </div>
               </div>
             );
           })}
